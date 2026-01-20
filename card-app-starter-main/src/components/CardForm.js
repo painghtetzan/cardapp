@@ -13,5 +13,14 @@ export default function CardForm({
   - handle form submission 
   - style as a form UI */
 
-  return <form></form>;
+  return <form >
+    <label>Card Name:
+      <input  type="text" name="name" />
+    </label>
+    <label>
+      Card Image URL:
+      <input type="text" name="pic" />
+    </label>
+    <button type="Submit">Add</button>
+  </form>;
 }

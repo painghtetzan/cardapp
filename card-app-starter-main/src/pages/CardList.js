@@ -8,6 +8,23 @@ export default function CardList() {
     - delete button calling handleDelete with the card object
     - handle loading, busy, and error states
     - style as a grid UI */
+    const [cards,setCards] = useState([])
+    useEffect(()=>{
+      async function loadcards(){
+        const allcards = await getCards()
+        console.log(allcards)
+        setCards(allcards)
+      }
+      loadcards()
+    },[])
+    
 
-  return <main></main>;
+
+  return <main>
+    <h1>All cards</h1>
+    {cards.map(card=>
+       (<Card card={card} />)
+    )}
+    
+  </main>;
 }

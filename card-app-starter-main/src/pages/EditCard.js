@@ -10,5 +10,7 @@ export default function EditCard() {
     - handle loading, busy, and error states
     - style as a form UI */
 
-  return <main></main>;
+  return <main>
+    
+  </main>;
 }

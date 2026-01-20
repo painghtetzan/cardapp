@@ -12,7 +12,8 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cards" element={<CardList />} />
+        <Route path="/cardList" element={<CardList />} />
+        <Route path="/addCard" element={<AddCard />} />
         {/* TODO: Complete the routes */}
       </Routes>
     </BrowserRouter>
