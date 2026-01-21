@@ -23,7 +23,7 @@ export default function CardList() {
   return <main>
     <h1>All cards</h1>
     {cards.map(card=>
-       (<Card card={card} />)
+       (<Card card={card} key={card.id} />)
     )}
     
   </main>;

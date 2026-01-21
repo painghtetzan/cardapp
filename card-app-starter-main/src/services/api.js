@@ -6,6 +6,8 @@
  * 3) Restart `npm start`
  */
 
+import Card from "../components/Card";
+
 
 const API_URL = process.env.REACT_APP_API_URL || "";
 console.log("API_URL =", API_URL);
@@ -27,14 +29,38 @@ export async function getCards() {
   return res.json();
 }
 
-export function addCard(card) {
+export async function addCard(card) {
   // TODO: implement POST /addcard
+  const res = await fetch(`${API_URL}/addcard`,{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(card)
+  })
+  if(!res.ok) throw new Error(res.status)
+    return res.json()
 }
 
-export function updateCard(id, card) {
+export async function updateCard(id, card ) {
   // TODO: implement PUT /updatecard/:id
+  const res = await fetch(`${API_URL}/editcard/${id}`,{
+    method:"PUT",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(card)
+    
+  })
+  if(!res.ok) throw new Error(res.status)
+    
 }
 
-export function deleteCard(id) {
+export async function deleteCard(id) {
   // TODO: implement DELETE /deletecard/:id
+  const res = await fetch(`${API_URL}/deletecard/${id}`,{
+    method:"DELETE"
+  })
+  if(!res.ok) throw new Error(res.status)
+    
 }
