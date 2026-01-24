@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { deleteCard } from "../services/api";
+
 import { useNavigate } from "react-router-dom";
 export default function Card({ card, onDelete, busy }) {
   /* TODO: Complete the Card component
@@ -12,17 +11,17 @@ export default function Card({ card, onDelete, busy }) {
   const navigate = useNavigate()   
 
   const handleDelete=()=>{
-    deleteCard(card.id)
+    onDelete(card.id)
   }
 
   const handleEdit=()=>{
     navigate(`/editCard`,{state:card})
   }
   return <div>
-    <img src={card.card_pic} />
+    <img src={card.card_pic} alt={card.card_name} />
     <h3> 
       {card.id} | {card.card_name}
     </h3>
-    <button onClick={handleDelete}>Delete</button> <button onClick={handleEdit}>Edit</button>
+    <button onClick={handleDelete} disabled={busy}>{busy? "Deleting..." : "Delete"}</button> <button onClick={handleEdit}>Edit</button>
   </div>;
 }

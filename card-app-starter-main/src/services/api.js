@@ -10,7 +10,7 @@ import Card from "../components/Card";
 
 
 const API_URL = process.env.REACT_APP_API_URL || "";
-console.log("API_URL =", API_URL);
+
 
 /**
  * TODO: If your backend routes differ, update the paths here.

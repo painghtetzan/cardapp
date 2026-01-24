@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function CardForm({
   buttonname,
   values,
@@ -16,12 +16,15 @@ export default function CardForm({
   - display submit button 
   - handle form submission 
   - style as a form UI */
+  const navigate = useNavigate()
   const [name,setName] = useState(values ? values.card_name : "")
   const [pic,setPic] = useState(values ? values.card_pic :"")
 
   const handleSubmit = (e)=>{
+
     e.preventDefault()
-      onSubmit(name,pic)
+    onSubmit(name,pic)
+    navigate('/cardList')
   }
 
   return <form onSubmit={handleSubmit}>
