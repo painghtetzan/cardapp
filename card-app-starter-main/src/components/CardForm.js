@@ -35,6 +35,6 @@ export default function CardForm({
       Card Image URL:
       <input type="text" name="pic" value={pic} onChange={e=>setPic(e.target.value)} />
     </label>
-    <button type="submit" >{buttonname}</button>
+    <input type="submit" value={buttonname} />
   </form>;
 }

@@ -114,6 +114,18 @@ input:focus {
   outline-color: #0099ff;
 }
 
+input[type="submit"] {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.65em 0;
+  background-color: #0066ff;
+  border: none;
+}
+input[type="submit"]:hover {
+  background-color: #00ccff;
+}
+
 /* layout */
 .app {
   min-height: 100vh;
