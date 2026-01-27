@@ -1,7 +1,11 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function CardForm({
+  buttonname,
   values,
   onChange,
   onSubmit,
+  onAdd,
   busy,
   error,
   submitText,
@@ -12,15 +16,25 @@ export default function CardForm({
   - display submit button 
   - handle form submission 
   - style as a form UI */
+  const navigate = useNavigate()
+  const [name,setName] = useState(values ? values.card_name : "")
+  const [pic,setPic] = useState(values ? values.card_pic :"")
 
-  return <form >
+  const handleSubmit = (e)=>{
+
+    e.preventDefault()
+    onSubmit(name,pic)
+    navigate('/cardList')
+  }
+
+  return <form onSubmit={handleSubmit}>
     <label>Card Name:
-      <input  type="text" name="name" />
+      <input  type="text" name="name" value={name} onChange={e => setName(e.target.value)}  />
     </label>
     <label>
       Card Image URL:
-      <input type="text" name="pic" />
+      <input type="text" name="pic" value={pic} onChange={e=>setPic(e.target.value)} />
     </label>
-    <button type="Submit">Add</button>
+    <button type="submit" >{buttonname}</button>
   </form>;
 }
