@@ -15,7 +15,7 @@
 }
 
 a {
-  color: #0066ff;
+  color: #6ba0f0;
 }
 
 a:hover {
@@ -25,7 +25,7 @@ a:hover {
 nav a {
   display: block;
   font-size: 1.25rem;
-  color: #0066ff;
+  color: #6ba0f0;
   padding-bottom: 0.15em;
   border-bottom: 2px solid transparent;
   font-weight: 500;
@@ -56,9 +56,9 @@ input[type="submit"] {
   color: #fff;
   font-weight: bold;
   padding: 0.65em 0;
-  background-color: #75bebd;
+  background-color: #5d72ab;
   border: none;
 }
 input[type="submit"]:hover {
-  background-color: #5dabaa;
+  background-color: #75bebd;
 }
