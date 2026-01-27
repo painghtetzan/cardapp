@@ -8,16 +8,18 @@ import "./App.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cardList" element={<CardList />} />
-        <Route path="/addCard" element={<AddCard />} />
-        <Route path="/editCard" element={<EditCard />} />
-        
-        {/* TODO: Complete the routes */}
-      </Routes>
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cardList" element={<CardList />} />
+          <Route path="/addCard" element={<AddCard />} />
+          <Route path="/editCard" element={<EditCard />} />
+          
+          {/* TODO: Complete the routes */}
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
