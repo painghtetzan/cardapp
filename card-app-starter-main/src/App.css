@@ -7,3 +7,58 @@
   - buttons/forms
   - spacing and responsiveness
 */
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  color: #0066ff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav a {
+  display: block;
+  font-size: 1.25rem;
+  color: #0066ff;
+  padding-bottom: 0.15em;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover, 
+.nav-active {
+  color: #67daaa;
+}
+
+input {
+  font-size: 1em;
+  margin-top: 0.35em;
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline-color: #5dabaa;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.65em 0;
+  background-color: #75bebd;
+  border: none;
+}
+input[type="submit"]:hover {
+  background-color: #5dabaa;
+}
